@@ -1,5 +1,48 @@
 # [Moment Timezone](http://momentjs.com/timezone)
 
+## EARTHLING INTERACTIVE CHANGES
+
+The only difference between this fork and the version it was forked from is a change to allow this library to be more easily imported when using TypeScript and Webpack. 
+
+### Example Usage
+
+1. Install Moment
+
+```
+npm install --save moment
+```
+
+2. Install this repo, add the following to your package.json dependencies:
+
+```
+"moment-timezone": "git://github.com/EarthlingInteractive/moment-timezone.git",
+```
+
+3. Install [json-loader](https://github.com/webpack-contrib/json-loader). 
+
+```
+npm install --save-dev json-loader
+```
+
+4. Add the following rule to your webpack.config:
+
+```
+{
+    test: /\.json$/,
+    loader: 'json-loader'
+}
+```
+
+5. Import moment and moment-timezone in your code:
+
+```
+import * as moment from "moment";
+import "moment-timezone";
+```
+
+---
+
+
 [![Join the chat at https://gitter.im/moment/moment-timezone](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/moment/moment-timezone?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 [![NPM version][npm-version-image]][npm-url] [![NPM downloads][npm-downloads-image]][npm-url] [![MIT License][license-image]][license-url] [![Build Status][travis-image]][travis-url]
